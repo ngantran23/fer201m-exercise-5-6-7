@@ -1,6 +1,6 @@
 import React from "react";
 
-function Navigation() {
+export default function Navigation() {
     return (
         <div>
             <nav>
@@ -31,4 +31,4 @@ function Navigation() {
     );
 }
 
-export default Navigation;
+
