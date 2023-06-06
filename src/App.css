@@ -39,6 +39,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 3.3);
   overflow: hidden;
   text-align: center;
+  border-radius: 2px;
 }
 
 .card img {
@@ -70,7 +71,7 @@
 }
 
 .card button:hover {
-  background-color: #b1b801;
+  background-color: #929702;
   text-decoration: underline;
 }
 
@@ -83,4 +84,62 @@
   padding: 2px;
   text-align: center;
   margin-top: 30px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 5px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup img{ width: 100%;}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.popup .close:hover {color: #fafa2d}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+#openPopUp {
+  color: #fff;
+  text-decoration: none;
 }

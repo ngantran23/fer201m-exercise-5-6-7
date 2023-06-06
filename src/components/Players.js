@@ -1,7 +1,9 @@
 import React from "react";
 import { Players } from "../shared/ListOfPlayers";
+import { useState } from "react";
 
 export default function Player() {
+    const [player, setPlayer] = useState([]);
     return (
         <div className="container">
             {Players.map((player) => (
@@ -11,7 +13,15 @@ export default function Player() {
                         <h3>{player.name}</h3>
                         <p className="title">{player.club}</p>
                         <p>
-                            <button>Detail</button>
+                            <button
+                                onClick={() => {
+                                    setPlayer(player);
+                                }}
+                            >
+                                <a href="#popup1" id="openPopUp">
+                                    Detail
+                                </a>
+                            </button>
                         </p>
                     </div>
                 </div>
@@ -19,4 +29,3 @@ export default function Player() {
         </div>
     );
 }
-
